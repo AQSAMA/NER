@@ -1,0 +1,25 @@
+[dataset]
+name = "bc5cdr"
+processed_dir = "data/processed/bc5cdr"
+tag_scheme = "BIOUL"
+
+[model]
+architecture = "char_cnn_bilstm_crf"
+word_dim = 128
+char_dim = 48
+char_kernel_sizes = [3, 4, 5]
+hidden_size = 192
+num_layers = 1
+dropout = 0.35
+
+[training]
+seed = 13
+batch_size = 32
+max_epochs = 40
+learning_rate = 0.001
+weight_decay = 0.00001
+patience = 6
+grad_clip = 5.0
+
+[evaluation]
+primary_metric = "strict_span_micro_f1"
