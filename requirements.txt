@@ -1,0 +1,4 @@
+torch>=2.2
+datasets>=2.19
+tqdm>=4.66
+seqeval>=1.2.2
